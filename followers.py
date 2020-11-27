@@ -4,6 +4,7 @@ import tweepy
 import config
 from tweepy import OAuthHandler
 from textblob import TextBlob
+from datetime import datetime
 
 class TwitterClient(object):
     '''
@@ -74,9 +75,15 @@ def main():
     screen_name = "_calcast"
     total_followers = api.get_total_followers(screen_name)
 
+    # datetime object containing current date and time
+    now = datetime.now()
+    # mm/dd/YY H:M:S
+    dt_string = now.strftime("%m/%d/%Y %H:%M:%S")
+
     user = {}
     user['screen_name'] = screen_name
     user['total_followers'] = total_followers
+    user['date'] = dt_string
     user['followers'] = api.get_followers(screen_name)
 
 
