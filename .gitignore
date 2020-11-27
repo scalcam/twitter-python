@@ -4,7 +4,7 @@
 
 #Ignore secrets file and json output
 config.py
-followers.json
+*.json
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
