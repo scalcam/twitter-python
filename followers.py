@@ -78,7 +78,7 @@ def main():
     # datetime object containing current date and time
     now = datetime.now()
     # mm/dd/YY H:M:S
-    dt_string = now.strftime("%m/%d/%Y %H:%M:%S")
+    dt_string = now.strftime("%m-%d-%Y_%H-%M-%S")
 
     user = {}
     user['screen_name'] = screen_name
